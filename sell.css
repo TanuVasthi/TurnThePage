@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -35,6 +35,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 button:hover {
@@ -44,47 +45,21 @@ button:hover {
 p{
     font-size: large;
 }
-.footer {
-    position: relative;
-    width: 100%;
-    color: rgb(213, 182, 26);
-    text-align: center;
-    padding: 20px;
-    font-family: 'Poppins';
-    background-color: #061f44; 
-  }
-  .social-icons {
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Poppins:wght@400;700&family=Tinos:wght@700&display=swap');
+
+body{
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .social-icon {
-    font-size: 20px;
-    margin: 0 15px;
-    color: rgb(213, 182, 26);
-    text-decoration: none;
-  }    
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    display: inline;
-    margin-right: 15px;
-  }
-  .navbar {
+    flex-direction: column;}
+.navbar {
     overflow: hidden;
     background-color: #061f44;
-    font-family: 'Poppins', sans-serif;
-  }
-  .navbar a {
+    font-family: 'Poppins', sans-serif;}
+.navbar a {
     float: left;
     font-size: 16px;
     color: rgb(213, 182, 26);
     text-align: center;
-    padding: 14px 20px; 
+    padding: 14px 16px;
     text-decoration: none;
 }
   .dropdown {
@@ -126,14 +101,55 @@ p{
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
-.signup {
-    position: absolute;
-    right: 20px;
-    top: 4%;
-    transform: translateY(-50%);
+  .signup{
+    position:relative;
+    left:40vw;
+  }
+  header {
+    background-color:#093577;
+    color: rgb(213, 182, 26);
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    padding:1vw;
+    height:10vh;
+  }
+
+.footer {
+  background-color: #061f44;
+  color: rgb(213, 182, 26);
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins';
+
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 15px;
+}
+
 a {
   color:rgb(213, 182, 26);
   text-decoration: none;
 }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 20px;
+  margin: 0 10px;
+  color: rgb(213, 182, 26);
+  text-decoration: none;
+}
+

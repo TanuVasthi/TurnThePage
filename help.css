@@ -18,7 +18,7 @@ header {
 }
 
 section {
-    max-width: 800px;
+    max-width: 80%;
     margin: 20px auto;
     padding: 30px;
     background-color: #fff;
@@ -133,7 +133,7 @@ li {
     }
     .signup{
       position:relative;
-      left:40vw;
+      left:600px;
     }
   
   

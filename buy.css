@@ -13,6 +13,10 @@
     justify-content: center;
     margin: 10px auto;
   }
+  .section2{
+    position:relative;
+    top:40px;
+  }
   .section2 .container .items {
     margin: 10px;
     width: 200px;
@@ -138,10 +142,16 @@
 body{
     display: flex;
     flex-direction: column;}
-.navbar {
-    overflow: hidden;
-    background-color: #061f44;
-    font-family: 'Poppins', sans-serif;}
+  .navbar {
+      width: 100%;
+      overflow: hidden;
+      background-color: #061f44;
+      font-family: 'Poppins', sans-serif;
+      
+      top: 0;
+      left: 0;
+      z-index: 1000; 
+    }
 .navbar a {
     float: left;
     font-size: 16px;
@@ -191,20 +201,22 @@ body{
   }
   .signup{
     position:relative;
-    left:40vw;
+    left:600px;
   }
   header {
-    background-color:#093577;
+    background-color: #093577;
     color: rgb(213, 182, 26);
     font-family: 'Poppins';
     text-align: center;
-    font-size: 45px;
-    font-weight: 400;
-    padding:1vw;
-    height:15vh;
+    font-size: 40px;
+    padding: 1vw;
+    width: 100%;
+    position: relative;
+  
   }
-
 .footer {
+  position:relative;
+  top:100px;
   background-color: #061f44;
   color: rgb(213, 182, 26);
   text-align: center;
@@ -241,5 +253,9 @@ a {
   text-decoration: none;
 }
 
+.section1{
+  position:relative;
+  top:38px
+}
 
     

@@ -32,10 +32,10 @@ body{
     text-decoration: none;
   }
   .footer {
-    position: absolute;
-    top:87vh;
-    left:0;
-    width:99vw;
+    position: relative;
+    top:103px;
+   
+    width:100%;
     background-color: #061f44;
     color: rgb(213, 182, 26);
     text-align: center;
@@ -110,18 +110,18 @@ body{
       display: block;
     }
     .sign-up{
-        position:absolute;
-        left:87vw;
+        position:relative;
+        left:600px;
     }
     .container {
         background-color: #fff;
         display: flex;
         position: relative;
-        top:10vh;
-        left:22vw;
+        top:50px;
+        margin:0 auto;
         box-shadow: 0 0 10px rgba(95, 93, 92, 0.5), 0 0 20px rgba(112, 108, 105, 0.3);
         max-width: 900px;
-        height:65vh;
+        height:482px;
     }
     
     .signUpImg {
@@ -150,7 +150,7 @@ body{
         text-align:center;
         font-size:30px;
         font-weight:600;
-        margin:20px 0px 30px;
+        margin:20px 0px 0px;
         color:#643717;
         font-family:'Poppins';
       }
@@ -158,7 +158,7 @@ body{
         font-size: 14px;
         text-align: center;
         position: relative;
-        top: -4vh;
+        
       }
       .signUp input {
         margin:10px 0px;
@@ -170,8 +170,8 @@ body{
         background-color: #e0dddd;
         color: #6d6b6b;
         border-radius: 10px;
-        width:13vw;
-        height:3.5vh;
+        width:200px;
+        height:30px;
         padding-left: 1vw;
         padding-right: 1vw;
         text-align: center;
@@ -197,7 +197,7 @@ body{
         font-size: 5px;
       }
       #signup button{
-        margin-top:2px;
+        
         
         padding:12px;
         padding-bottom: 10px;
@@ -211,9 +211,9 @@ body{
         transition: .3s;
         cursor:pointer;
         width:15vw;
-        position: absolute;
-        top:55vh;
-        left:35vw;
+        position: relative;
+        
+        margin:2px 100px 0;
       }
       #signup:hover{
         opacity: .8;

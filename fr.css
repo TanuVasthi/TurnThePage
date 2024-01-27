@@ -21,7 +21,7 @@ h4{
 }
 .footer {
   position: relative;
-  width: 100%;
+  width: 97%;
   color: rgb(213, 182, 26);
   text-align: center;
   padding: 20px;
@@ -103,10 +103,10 @@ li {
     display: block;
   }
   
-.signup {
-    position: relative;
-    left:36vw;
-}
+  .signup{
+    position:relative;
+    left:560px;
+  }
 a {
   color:rgb(213, 182, 26);
   text-decoration: none;

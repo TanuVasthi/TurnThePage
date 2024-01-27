@@ -13,8 +13,9 @@ header {
   text-align: center;
   font-size: 40px;
   font-weight: 400;
-  
-  height:12vh;
+  position:relative;
+  height:90px;
+  padding-top: 20px;
 }
 
 section {
@@ -45,7 +46,7 @@ h2 {
     padding: 20px;
     font-family: 'Poppins';
     position: relative;
-    top:10vh;
+    top:90px;
   
   }
   
@@ -131,7 +132,7 @@ h2 {
     }
     .signup{
       position:relative;
-      left:42vw;
+      left:600px;
     }
   
   

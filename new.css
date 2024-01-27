@@ -9,6 +9,8 @@ body{
   flex-direction: column;
 }
 .navbar {
+    width:100%;
+    /*position:fixed;*/
     overflow: hidden;
     background-color: #061f44;
     font-family: 'Poppins', sans-serif;
@@ -75,12 +77,15 @@ h2{
     text-align: center;
     color: rgba(90, 54, 1, 0.938);
     font-family: "Trirong", serif;
+    position:relative;
+    top:40px;
     font-size: 60px;
 }
 h4{
   text-align: center;
-  left:60vw;
-  top:10vh;
+  position:relative;
+  
+  top:30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size:20px;
   color:rgb(158, 96, 3);
@@ -92,11 +97,14 @@ h4{
     font-family: 'Alegreya';
     font-size: 22px;
     position: relative;
+    top:40px;
     text-align: justify;
     margin-left:70px;
     margin-right: 70px;
 }
 .rating{
+  position:relative;
+  top:70px;
     text-align: center;
     font-size: 25px;
     color: rgb(11, 0, 41);

@@ -25,13 +25,15 @@ const Navbar=()=>{
           <a href="contact.html">Contact Us</a>
 
           <div class="signup">
+          
             <a href="login.html">Login</a>
             <a href="sign_up.html">Sign Up</a>
           </div>
         </div>
       </div><div><header>Shopping Cart</header></div>
       <div><p class="EmptyCart">Cart's lonely. Add some stories!</p></div>
-      <div><button class='btn'><a href="buy.html">Return to Shop</a></button></div></>
+      <div><button class='btn'><a href="buy.html">Return to Shop</a></button></div>
+      </>
     );
 };
 export default Navbar;

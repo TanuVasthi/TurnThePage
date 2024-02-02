@@ -103,9 +103,11 @@ li {
     display: block;
   }
   
-  .signup{
-    position:relative;
-    left:560px;
+  .signup {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    margin-right: 20px; 
   }
 a {
   color:rgb(213, 182, 26);

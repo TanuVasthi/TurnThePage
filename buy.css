@@ -199,9 +199,11 @@ body{
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  .signup{
-    position:relative;
-    left:600px;
+  .signup {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    margin-right: 20px; 
   }
   header {
     background-color: #093577;

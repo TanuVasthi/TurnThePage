@@ -25,3 +25,6 @@ function validateForm() {
     // If validation passes, you can proceed with the login logic
     alert('Login successful!');
 }
+function fp(){
+    alert("Please check your email for instructions on resetting your password.");
+}

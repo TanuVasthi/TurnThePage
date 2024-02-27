@@ -15,6 +15,8 @@
 
 </head>
 <body>
+  <div id="paymentBanner" class="payment-banner"></div>
+
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="guideToSell.html">Guide to Sell</a>
@@ -90,18 +92,14 @@
             <textarea id="address" rows="4"></textarea>
 
             <h1>Payment Details:</h1>
+            <label for="upiId">UPI ID:</label>
+<input type="text" id="upiId" required>
 
-            <h3>Preferred Payment Mode:</h3>
-            <p >After your book is sold in what mode will you like to recieve payment?</p>
-            <div>
-                <input type="radio" name="payment" value="UPI">
-                <label for="UPI">UPI Number</label>
+            
+            
+            
 
-                <input type="radio" name="payment" value="bank">
-                <label for="bank">Bank Account</label>
-            </div>
-
-            <button type="button" onclick="proceedToDetailsPage()">Proceed</button>
+            <button type="button" onclick="proceed()">Proceed</button>
 
         </form>
     </div>

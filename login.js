@@ -1,30 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('login-btn').addEventListener('click', function () {
-        validateForm();
+    document.getElementById('login-btn').addEventListener('click', async function (event) {
+        event.preventDefault(); // Prevent form submission for now
+        try {
+            await validateForm();
+        } catch (error) {
+            console.error('Error during form validation:', error);
+        }
     });
 });
 
-function validateForm() {
+async function validateForm() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
-    // Validate username
-    var usernameRegex = /^[a-zA-Z0-9_]+$/;
-    if (!usernameRegex.test(username)) {
-        alert('Username can only contain alphabets, numbers, and underscores.');
-        return;
-    }
+    // Assuming you have a function to send login request and handle response
+    const isSuccess = await sendLoginRequest(username, password);
 
-    // Validate password
-    var passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
-    if (!passwordRegex.test(password)) {
-        alert('Password should be at least 8 characters long and contain at least one special character and one number.');
-        return;
+    if (isSuccess.success) {
+        localStorage.setItem('user', JSON.stringify(isSuccess.user));
+        window.location.href = 'index.html'; // Redirect to index.html on successful login
+    } else {
+        alert('Invalid credentials. Please try again.');
+        return false;
     }
-
-    // If validation passes, you can proceed with the login logic
-    alert('Login successful!');
 }
+
+
+
+
+async function sendLoginRequest(username, password) {
+    try {
+        const response = await fetch('http://localhost:3001/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+        });
+        
+        console.log('Response Status:', response.status);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+        return { success: false, error: 'An error occurred during the request.' };
+    }
+}
+
+
 function fp(){
     alert("Please check your email for instructions on resetting your password.");
 }

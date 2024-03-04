@@ -32,7 +32,7 @@
           
       
           <div class="signup">
-            <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="addToCart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
             <a href="login.html">Login</a>
           <a href="sign_up.html">Sign Up</a>
           </div>
@@ -51,19 +51,24 @@
             Welcome to our Fiction Oasis – where every reader is a cherished protagonist in the narrative of our extraordinary community!</div>
         <div id="comments-container">
         </div>
-        <form id="comment-form">
-            <h5><div class="head"><label for="book-comment">Write your musings</label></div></h5>
-            <textarea id="book-comment" rows="4" cols="20" required></textarea>
-            <button type="submit">Post</button>
-        </form>
+        
+<form id="comment-form" action="/comment" method="POST">
+  <h5><div class="head"><label for="username">Your Name:</label></div></h5>
+  <input type="text" id="username" name="username" required>
+  <h5><div class="head"><label for="bookcomment">Write your musings</label></div></h5>
+  <textarea id="bookcomment" rows="4" cols="20" name="bookcomment" required></textarea>
+  <button type="submit">Post</button>
+</form>
+
     </div>
     <br>
     <div class="ebook">
         "Explore a world of literary wonders! Click the link to discover a vast collection of ebooks and audiobooks."<br>
     <a href="https://www.kobo.com/in/en/p/free-ebooks">Discover Tales</a>
     </div>
+    
 
-    <script src="clubs.js"></script>
+    <script src="clubsFiction.js"></script>
     <footer>
         <div class="footer">
           <ul>

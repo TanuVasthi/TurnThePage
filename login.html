@@ -46,50 +46,42 @@
 </header>
 <div class="container">
   <div class="login-pic"></div>
+    
     <div class="login-form">
-        <div class="form-title">
-          Login
-        </div>
-        <div class="form-input">
-          <label for="username">Username</label>
-          <input type="text" id="username">
-        </div>
-        
-        <div class="form-input">
-          <label for="password">Password</label>
-          <input type="password" id="password">
-        </div>
-        <br>
-        <div class="form-input">
-          <button id="login-btn">Login</button>
-        </div>
-        <br>
-      <p class="fp">
-      <a href="#" onclick="fp()">Forgot Password?</a>
-      <br><br>
-      <a href="sign_up.html" >New User?</a>
-      </p>
-      </div>
-    </div>
-      <div class="footer">
-        <ul>
+      <form id="login-form">
+          <div class="form-title">
+              Login
+          </div>
+          <div class="form-input">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username">
+          </div>
           
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="help.html">FAQs</a></li>
-          
-          
-      </ul>
-      <div class="social-icons">
-          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-reddit"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-    
-      </div>
-      </div>
-    
-      
+          <div class="form-input">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password">
+          </div>
+          <br>
+          <div class="form-input">
+              <button id="login-btn" type="submit">Login</button>
+          </div>
+          <br>
+          <p class="fp">
+              <a href="#" onclick="fp()">Forgot Password?</a>
+              <br><br>
+              <a href="sign_up.html">New User?</a>
+          </p>
+      </form>
+  </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            // Display user information or perform actions based on login
+            console.log('User details:', user);
+        }
+    });
+</script>
 </body> 
 </html>

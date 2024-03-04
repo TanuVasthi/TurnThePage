@@ -26,36 +26,63 @@ function calculatePrice() {
     document.getElementById('calculatedPrice').value = calculatedPrice.toFixed(2);
 }
 function proceed() {
-    // Get UPI ID from the input field
-    var upiId = document.getElementById("upiId").value;
+    // Get data from the form
+    const bookData = {
+        title: document.getElementById("bookName").value,
+        author: document.getElementById("author").value,
+        condition: document.querySelector('input[name="condition"]:checked').value,
+        review: document.getElementById("review").value,
+        original_price: parseFloat(document.getElementById("originalPrice").value),
+        seller_name: document.getElementById("Name").value,
+        seller_contact: document.getElementById("contact").value,
+        seller_address: document.getElementById("address").value,
+        upi_id: document.getElementById("upiId").value,
+    };
 
-    // Display payment banner
-    showPaymentBanner();
-
-    // Simulate a delay for 4 seconds
-    setTimeout(function () {
-        // Redirect to index.html after 4 seconds
-        window.location.href = "index.html";
-    }, 4000);
+    // Make a POST request to the server
+    fetch('http://localhost:3001/sell', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(bookData),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Display payment banner and redirect after 4 seconds
+            showPaymentBanner();
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 4000);
+        } else {
+            // Handle error
+            alert('Failed to store information. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error during POST request:', error);
+        alert('An error occurred. Please try again.');
+    });
 }
+
 
 function showPaymentBanner() {
     var paymentBanner = document.getElementById("paymentBanner");
     
-    // Display the banner with a message
+   
     paymentBanner.innerHTML = "Payment will be processed in 3-4 business days. Thank you!";
-    
-    // Apply styles for the banner
-    paymentBanner.style.backgroundColor = "rgba(13, 187, 30)"; // Green color
-    paymentBanner.style.color = "#fff"; // White text
-    paymentBanner.style.padding = "15px"; // Padding for better visibility
-    paymentBanner.style.textAlign = "center"; // Center-align text
-    paymentBanner.style.position = "fixed"; // Fixed position at the top
-    paymentBanner.style.width = "100%"; // Full width
-    paymentBanner.style.top = "0"; // Display at the top
-    paymentBanner.style.zIndex = "1"; // Ensure it's above other elements
 
-    // Auto-hide the banner after 4 seconds
+    paymentBanner.style.backgroundColor = "rgba(13, 187, 30)"; 
+    paymentBanner.style.color = "#fff"; 
+    paymentBanner.style.padding = "15px"; 
+    paymentBanner.style.textAlign = "center"; 
+    paymentBanner.style.position = "fixed"; 
+    paymentBanner.style.width = "100%";
+    paymentBanner.style.top = "0"; 
+    paymentBanner.style.zIndex = "1"; 
+
+  
     setTimeout(function () {
         paymentBanner.style.display = "none";
     }, 4000);
